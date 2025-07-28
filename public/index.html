@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI English Professor | Cosmic Scholar</title>
+
+    <link rel="icon" type="image/png" href="research.png">
+
+    <!-- Google Fonts: Inter for UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Library (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Our Breathtaking Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <!-- This div is for the animated particle background -->
+    <div id="particle-container"></div>
+
+    <header>
+        <h1>Cosmic Scholar</h1>
+        <p>Your AI Guide Through the Stars of Literature</p>
+    </header>
+
+    <div id="chat-container">
+        <!-- AI's Welcome Message -->
+        <div class="message ai-message">
+            <div class="message-content">
+                <div class="prose">
+                    <p>Greetings. I am the Cosmic Scholar. Ask me to unravel the complexities of the Class 11 English syllabus, and we shall explore the universe of words together.</p>
+                </div>
+            </div>
+        </div>
+        <!-- The AI thinking indicator will be injected here by JS -->
+    </div>
+    
+    <div class="bottom-area">
+        <label for="pdf-upload" id="upload-btn-label" title="Upload a Document">
+            <i class="fa-solid fa-star-of-life"></i> <!-- A more magical icon -->
+        </label>
+        <input type="file" id="pdf-upload" accept="application/pdf" style="display: none;">
+
+        <button id="download-btn" title="Download Chat as PDF"><i class="fa-solid fa-file-arrow-down"></i></button>
+
+        <div id="input-area">
+            <textarea id="user-input" placeholder="Ask a question..." rows="1"></textarea>
+            <button id="send-btn" title="Send Message"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- The defer attribute makes the script execute after the document has been parsed -->
+    <script src="script.js" defer></script>
+</body>
+</html>

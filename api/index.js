@@ -47,7 +47,7 @@ function addCitations(response) {
 
 // --- MODEL CONFIGURATION ---
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash-latest",
+  model: "gemini-2.5-pro",
   systemInstruction: "You are a helpful English Professor AI. Your answers should be accurate and factual. Use markdown for formatting.",
   tools: [{ googleSearch: {} }],
   safetySettings: [

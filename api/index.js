@@ -59,7 +59,7 @@ const model = genAI.getGenerativeModel({
 // --- API ENDPOINTS ---
 
 // 1. Endpoint for Text Chat (with memory and search grounding)
-app.post('/generate-text', async (req, res) => {
+app.post('/api/generate-text', async (req, res) => {
     try {
         const { prompt, history } = req.body;
         const chat = model.startChat({ history });
@@ -80,7 +80,7 @@ app.post('/generate-text', async (req, res) => {
 });
 
 // 2. Endpoint for PDF Analysis (stateless)
-app.post('/analyze-pdf', upload.single('pdfFile'), async (req, res) => {
+app.post('/api/analyze-pdf', upload.single('pdfFile'), async (req, res) => {
     try {
         if (!req.file) {
             return res.status(400).json({ error: 'No PDF file was uploaded.' });
